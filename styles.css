@@ -15,10 +15,10 @@ body {
   background-image: url("images/01.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  width: 100%;
+  background-position: center;
+  height: vh;
+  width: vw;
 }
-
 .header {
   display: flex;
   justify-content: space-around;
@@ -28,7 +28,7 @@ body {
   background-color: crimson;
   position: fixed;
   top: 0;
-}
+  }
 
 ul {
   display: inline-flex;
@@ -75,23 +75,29 @@ li a:hover {
     top: 0px;
   }
 }
-ol {
-  display: inline-block;
+.stars {
+  display: flex;
   margin-top: 120px;
   padding: 0 30px;
-  justify-content: flex-start;
-  margin-left: 150px;
+  /* margin-left: 150px; */
 }
-ol li {
+.stars li {
+  text-align: center;
   margin: 4px;
   padding: 4px;
   list-style: none;
   overflow: hidden;
   text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+
 }
 
 ol li a:hover {
-  border-bottom: 4px solid red;
+  display: inline-flex;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #18b2ff,
+  0 0 30px #18b2ff, 0 0 40px #18b2ff, 0 0 55px #18b2ff, 0 0 75px #18b2ff;
+
 }
 
 .ave {
@@ -100,13 +106,15 @@ ol li a:hover {
   color: white;
 }
 .avengers {
+  display: inline-block;
   font-family: The + Avengers;
   font-size: 4em;
   font-style: italic;
   letter-spacing: 0px;
   font-weight: bold;
   color: crimson;
-}
+  margin-top: 200px;
+?}
 
 .avengers:hover {
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #18b2ff,
@@ -121,7 +129,9 @@ main p {
   display: flex;
   padding: 20px;
   margin: 0 10px;
-  border: solid 2px red;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #18b2ff,
+  0 0 30px #18b2ff, 0 0 40px #18b2ff, 0 0 55px #18b2ff, 0 0 75px #18b2ff;
+
 }
 
 footer {
