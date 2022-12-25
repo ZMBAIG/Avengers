@@ -28,7 +28,7 @@ body {
   background-color: crimson;
   position: fixed;
   top: 0;
-  }
+}
 
 ul {
   display: inline-flex;
@@ -76,10 +76,14 @@ li a:hover {
   }
 }
 .stars {
-  display: flex;
+  display: inline-block;
+  flex-direction: column;
   margin-top: 120px;
+  justify-content: flex-end;
   padding: 0 30px;
-  /* margin-left: 150px; */
+  margin-left: 150px;
+  /* border: red 1px solid; */
+  max-width: 600px;
 }
 .stars li {
   text-align: center;
@@ -90,14 +94,12 @@ li a:hover {
   text-transform: uppercase;
   font-size: 10px;
   letter-spacing: 2px;
-
 }
 
 ol li a:hover {
   display: inline-flex;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #18b2ff,
-  0 0 30px #18b2ff, 0 0 40px #18b2ff, 0 0 55px #18b2ff, 0 0 75px #18b2ff;
-
+    0 0 30px #18b2ff, 0 0 40px #18b2ff, 0 0 55px #18b2ff, 0 0 75px #18b2ff;
 }
 
 .ave {
@@ -114,24 +116,36 @@ ol li a:hover {
   font-weight: bold;
   color: crimson;
   margin-top: 200px;
-?}
+}
 
 .avengers:hover {
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #18b2ff,
     0 0 30px #18b2ff, 0 0 40px #18b2ff, 0 0 55px #18b2ff, 0 0 75px #18b2ff;
   cursor: pointer;
 }
+
+.para-01 {
+  grid-area: left;
+}
+
+.para-02 {
+  grid-area: middle;
+}
+.para-03 {
+  grid-area: right;
+}
+
 main {
-  margin-top: 50%;
-  display: flex;
+  margin-top: 40%;
+  display: grid;
+  grid-template-areas: "left middle right";
 }
 main p {
   display: flex;
   padding: 20px;
   margin: 0 10px;
   box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #18b2ff,
-  0 0 30px #18b2ff, 0 0 40px #18b2ff, 0 0 55px #18b2ff, 0 0 75px #18b2ff;
-
+    0 0 30px #18b2ff, 0 0 40px #18b2ff, 0 0 55px #18b2ff, 0 0 75px #18b2ff;
 }
 
 footer {
@@ -153,4 +167,23 @@ a {
 .studio {
   margin-top: 6px;
   padding: 6px;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin: 10px 20px;
+    gap: 20px;
+    grid-template-areas:
+      "left left left"
+      "middle middle middle"
+      "right right right";
+  }
+  .avengers {
+    text-align: center;
+    font-size: 2.5em;
+  }
+  .stars {
+    display: inline-flex;
+    /* justify-content: center; */
+  }
 }
