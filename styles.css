@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Calligraffitti&family=Fasthand&family=Freehand&family=Great+Vibes&family=Orbitron:wght@700&family=Pacifico&family=Poppins:wght@300&family=Sacramento&family=Yesteryear&display=swap");
+
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 @import url(//db.onlinewebfonts.com/c/1742e49b3f6d454ce4a8bfbf68af4dc3?family=Heroes+Assemble);
@@ -11,11 +13,58 @@
   color: white;
   font-family: Muli;
 }
+
+/* klok */
+
+#klok {
+  display: inline;
+  float: right;
+  font-family: Orbitron;
+  max-width: 40%;
+  position: relative;
+  margin-top: 15%;
+  margin-right: 6%;
+  background-color: #100505;
+  padding: 15px 30px;
+  color: #6666ff;
+  border-radius: 45px;
+  font-size: 2em;
+  letter-spacing: 0.25em;
+  border: 1px red solid;
+}
+/* Creating box shadow */
+#klok:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-45deg, #60efff 0%, #00ff87 100%);
+  transform: translate3d(0px, 20px, 0) scale(0.95);
+  filter: blur(20px);
+  opacity: var(0.7);
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+#klok::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+
 body {
   background-image: url("images/01.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: stretch;
   height: vh;
   width: vw;
 }
@@ -115,7 +164,7 @@ ol li a:hover {
   letter-spacing: 0px;
   font-weight: bold;
   color: crimson;
-  margin-top: 200px;
+  margin-top: 25%;
 }
 
 .avengers:hover {
@@ -182,8 +231,11 @@ a {
     text-align: center;
     font-size: 2.5em;
   }
-  .stars {
+  /* .stars {
     display: inline-flex;
-    /* justify-content: center; */
+  } */
+  #klok {
+    margin-top: 25%;
+    font-size: 16px;
   }
 }
