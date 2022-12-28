@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script defer src="script.js"></script>
     <link
       rel="stylesheet"
@@ -14,8 +18,6 @@
     />
   </head>
   <body>
-    <div id="klok" onload="currentTime()"></div>
-
     <!-- Choose an avenger!
 Use HTML and CSS to create an information page about him, appropriate colors and images. The page must contain:
 
@@ -26,7 +28,7 @@ x At least one paragraph with a stylized color, font and size
 x A footer with links -->
     <header class="header">
       <div class="logo">
-        <img src="images/logo-02.png" alt="logo" width="120px" />
+        <img src="images/logo-02.png" alt="logo" />
       </div>
       <nav>
         <ul>
@@ -46,6 +48,8 @@ x A footer with links -->
     <div class="animation">
       <img src="images/logo-03.png" alt="logo" width="120px" />
     </div>
+    <div id="klok" onload="currentTime()"></div>
+
     <section>
       <ol class="stars">
         <li>
@@ -142,10 +146,21 @@ x A footer with links -->
       </p>
     </main>
     <footer>
-      <a href="https://www.marvel.com/movies" target="_blank"
-        ><p class="marvel">Marvel</p></a
-      >
-      <span class="studio">baigzafar@gmail.com</span>
+      <div>
+        <a href="https://www.marvel.com/movies" target="_blank"
+          ><p class="marvel">Marvel</p></a
+        >
+      </div>
+      <div class="studio">
+        <a href="#">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i
+        ></a>
+        <a href="#"> <i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="#"> <i class="fa fa-snapchat w3-hover-opacity"></i></a>
+        <a href="#"> <i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+        <a href="#"> <i class="fa fa-twitter w3-hover-opacity"></i></a>
+        <a href="#"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>
+      </div>
     </footer>
   </body>
 </html>

@@ -14,16 +14,24 @@
   font-family: Muli;
 }
 
+.logo img {
+  width: 150px;
+  height: 120px;
+}
+
 /* klok */
 
 #klok {
-  display: inline;
-  float: right;
+  /* display: inline; */
+  /* float: right; */
   font-family: Orbitron;
   max-width: 40%;
-  position: relative;
-  margin-top: 15%;
-  margin-right: 6%;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  /* margin-top: 5%; */
+  /* margin-left: 25%; */
   background-color: #100505;
   padding: 15px 30px;
   color: #6666ff;
@@ -64,7 +72,7 @@ body {
   background-image: url("images/01.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: stretch;
+  background-position: fixed;
   height: vh;
   width: vw;
 }
@@ -125,14 +133,14 @@ li a:hover {
   }
 }
 .stars {
-  display: inline-block;
-  flex-direction: column;
-  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 300px;
+  margin-top: 22%;
   justify-content: flex-end;
   padding: 0 30px;
   margin-left: 150px;
   /* border: red 1px solid; */
-  max-width: 600px;
 }
 .stars li {
   text-align: center;
@@ -164,7 +172,7 @@ ol li a:hover {
   letter-spacing: 0px;
   font-weight: bold;
   color: crimson;
-  margin-top: 25%;
+  margin-top: 0%;
 }
 
 .avengers:hover {
@@ -198,7 +206,7 @@ main p {
 }
 
 footer {
-  padding: 40px;
+  padding: 20px;
   display: flex;
   justify-content: center;
 }
@@ -215,12 +223,23 @@ a {
 }
 .studio {
   margin-top: 6px;
+  margin-left: 2em;
   padding: 6px;
+  font-size: 1.5em;
+  display: flex;
+  gap: 16px;
+}
+.studio a:hover {
+  background-color: #00b3ff;
+  opacity: 0.6;
+  padding: 8px 10px;
+  border-radius: 50%;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
   main {
-    margin: 10px 20px;
+    margin: 10px;
     gap: 20px;
     grid-template-areas:
       "left left left"
@@ -235,7 +254,12 @@ a {
     display: inline-flex;
   } */
   #klok {
-    margin-top: 25%;
+    margin-top: -25%;
     font-size: 16px;
+  }
+  .logo img {
+    width: 50px;
+    height: 60px;
+    margin-left: 16px;
   }
 }
